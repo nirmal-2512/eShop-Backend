@@ -1,0 +1,1 @@
+//username, email, fullname, password, cart, isadmin, orders, contact, password, profilepic - db, 
