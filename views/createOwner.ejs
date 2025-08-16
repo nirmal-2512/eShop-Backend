@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <% if (error.length> 0) { %>
+    <div class="alert alert-danger">
+      <%= error %>
+    </div>
+    <% } %>
+
+      <div class="flex flex-col h-screen w-screen justify-center px-6 py-12 lg:px-8 bg-blue-200">
+        <div class="sm:mx-auto sm:w-full sm:max-w-screen">
+          <h2 class="mt-1 font-sans text-center text-5xl font-bold text-blue-900">Threft $tore</h2>
+          <h2 class="mt-3 text-center text-3xl font-bold tracking-tight text-gray-600">Create Your Owners Account</h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form action="/owners/create" method="POST" class="space-y-6">
+            <div>
+              <label for="fullname" class="block text-sm/6 font-medium text-gray-600">Full Name</label>
+              <div class="mt-2">
+                <input id="fullname" type="fullname" name="fullname" required autocomplete="name"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+              </div>
+              <label for="email" class="block text-sm/6 font-medium text-gray-600">Email address</label>
+              <div class="mt-2">
+                <input id="email" type="email" name="email" required autocomplete="email"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+              </div>
+              <label for="contact" class="block text-sm/6 font-medium text-gray-600">Contact</label>
+              <div class="mt-2">
+                <input id="contact" type="contact" name="contact" required autocomplete="contact"
+                  class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between">
+                  <label for="password" class="block text-sm/6 font-medium text-gray-600">Password</label>
+                </div>
+                <div class="mt-2">
+                  <input id="password" type="password" name="password" required autocomplete="current-password"
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-black outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                </div>
+              </div>
+
+              <div>
+                <button type="submit"
+                  class="flex w-full justify-center mt-5 rounded-md bg-blue-900 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Create
+                  Owner</button>
+              </div>
+          </form>
+        </div>
+      </div>
+</body>
+
+
+</html>

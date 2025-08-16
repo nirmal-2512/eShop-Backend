@@ -1,25 +1,21 @@
 //product, image, name, price, discount, bgcolour, panelcolour
 
-const mogoose = require('mongoose');
+const mongoose = require('mongoose');
 
 
-const productSchema = mogoose.Schema({
-  image: String,
+const productSchema = mongoose.Schema({
+  image: Buffer,
   name: String,
   price: Number,
   dicount:{
     type : Number,
     default: 0,
   },
-  isadmin: Boolean,
-  bgcolor:{
-    type : String,
-    default: red,
-  },
+  bgcolor:String,
   panelcolor: String,
   textcolor: String,
 
 });
 
-module.exports = mongoose.model("product", userSchema);
+module.exports = mongoose.model("product", productSchema);
 
